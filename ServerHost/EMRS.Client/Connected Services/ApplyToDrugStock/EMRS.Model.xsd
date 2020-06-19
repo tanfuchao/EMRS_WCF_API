@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EMRS.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EMRS.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfChooseDrugViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChooseDrugViewModel" nillable="true" type="tns:ChooseDrugViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChooseDrugViewModel" nillable="true" type="tns:ArrayOfChooseDrugViewModel" />
+  <xs:complexType name="ChooseDrugViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DrugCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InputCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChooseDrugViewModel" nillable="true" type="tns:ChooseDrugViewModel" />
+  <xs:complexType name="ArrayOfChooseDrugSizeViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChooseDrugSizeViewModel" nillable="true" type="tns:ChooseDrugSizeViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChooseDrugSizeViewModel" nillable="true" type="tns:ArrayOfChooseDrugSizeViewModel" />
+  <xs:complexType name="ChooseDrugSizeViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountPerPackage" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DrugCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrugSpec" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirmId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MinSpec" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MinUnits" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RetailPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TradePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Units" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChooseDrugSizeViewModel" nillable="true" type="tns:ChooseDrugSizeViewModel" />
+  <xs:complexType name="ArrayOfCreateDrugListViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CreateDrugListViewModel" nillable="true" type="tns:CreateDrugListViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCreateDrugListViewModel" nillable="true" type="tns:ArrayOfCreateDrugListViewModel" />
+  <xs:complexType name="CreateDrugListViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Drug_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Drug_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Drug_Spec" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enter_Date_Time" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Expire_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Package_Spec" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Package_Units" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateDrugListViewModel" nillable="true" type="tns:CreateDrugListViewModel" />
+  <xs:complexType name="ArrayOfDrugStockDetailViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DrugStockDetailViewModel" nillable="true" type="tns:DrugStockDetailViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDrugStockDetailViewModel" nillable="true" type="tns:ArrayOfDrugStockDetailViewModel" />
+  <xs:complexType name="DrugStockDetailViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADMINISTRATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BATCH_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOSE_PER_UNIT" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DOSE_UNITS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DRUG_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DRUG_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DRUG_SPEC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EXPIRE_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FIRM_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NOTES" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QUANTITY" type="xs:int" />
+      <xs:element minOccurs="0" name="STORAGE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUB_STORAGE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUPPLY_INDICATOR" type="xs:int" />
+      <xs:element minOccurs="0" name="UNITS" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DrugStockDetailViewModel" nillable="true" type="tns:DrugStockDetailViewModel" />
+</xs:schema>

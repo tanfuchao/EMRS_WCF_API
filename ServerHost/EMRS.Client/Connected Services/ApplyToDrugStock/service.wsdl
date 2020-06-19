@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ApplyToDrugStock" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/EMRS.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IApplyToDrugStock_GetChooseDrugListByStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChooseDrugListByStorage" />
+  </wsdl:message>
+  <wsdl:message name="IApplyToDrugStock_GetChooseDrugListByStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChooseDrugListByStorageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplyToDrugStock_GetChooseDrugSizeByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChooseDrugSizeByCode" />
+  </wsdl:message>
+  <wsdl:message name="IApplyToDrugStock_GetChooseDrugSizeByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChooseDrugSizeByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplyToDrugStock_GetChooseDrugSize_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChooseDrugSize" />
+  </wsdl:message>
+  <wsdl:message name="IApplyToDrugStock_GetChooseDrugSize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChooseDrugSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplyToDrugStock_GetAutoCreateDrugList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoCreateDrugList" />
+  </wsdl:message>
+  <wsdl:message name="IApplyToDrugStock_GetAutoCreateDrugList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoCreateDrugListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplyToDrugStock_InsertDrugApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDrugApplication" />
+  </wsdl:message>
+  <wsdl:message name="IApplyToDrugStock_InsertDrugApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDrugApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplyToDrugStock_GetDrugDetailList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrugDetailList" />
+  </wsdl:message>
+  <wsdl:message name="IApplyToDrugStock_GetDrugDetailList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDrugDetailListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IApplyToDrugStock">
+    <wsdl:operation name="GetChooseDrugListByStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplyToDrugStock/GetChooseDrugListByStorage" message="tns:IApplyToDrugStock_GetChooseDrugListByStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplyToDrugStock/GetChooseDrugListByStorageResponse" message="tns:IApplyToDrugStock_GetChooseDrugListByStorage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseDrugSizeByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplyToDrugStock/GetChooseDrugSizeByCode" message="tns:IApplyToDrugStock_GetChooseDrugSizeByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplyToDrugStock/GetChooseDrugSizeByCodeResponse" message="tns:IApplyToDrugStock_GetChooseDrugSizeByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseDrugSize">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplyToDrugStock/GetChooseDrugSize" message="tns:IApplyToDrugStock_GetChooseDrugSize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplyToDrugStock/GetChooseDrugSizeResponse" message="tns:IApplyToDrugStock_GetChooseDrugSize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoCreateDrugList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplyToDrugStock/GetAutoCreateDrugList" message="tns:IApplyToDrugStock_GetAutoCreateDrugList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplyToDrugStock/GetAutoCreateDrugListResponse" message="tns:IApplyToDrugStock_GetAutoCreateDrugList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDrugApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplyToDrugStock/InsertDrugApplication" message="tns:IApplyToDrugStock_InsertDrugApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplyToDrugStock/InsertDrugApplicationResponse" message="tns:IApplyToDrugStock_InsertDrugApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugDetailList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IApplyToDrugStock/GetDrugDetailList" message="tns:IApplyToDrugStock_GetDrugDetailList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IApplyToDrugStock/GetDrugDetailListResponse" message="tns:IApplyToDrugStock_GetDrugDetailList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IApplyToDrugStock" type="tns:IApplyToDrugStock">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetChooseDrugListByStorage">
+      <soap:operation soapAction="http://tempuri.org/IApplyToDrugStock/GetChooseDrugListByStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseDrugSizeByCode">
+      <soap:operation soapAction="http://tempuri.org/IApplyToDrugStock/GetChooseDrugSizeByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChooseDrugSize">
+      <soap:operation soapAction="http://tempuri.org/IApplyToDrugStock/GetChooseDrugSize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoCreateDrugList">
+      <soap:operation soapAction="http://tempuri.org/IApplyToDrugStock/GetAutoCreateDrugList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDrugApplication">
+      <soap:operation soapAction="http://tempuri.org/IApplyToDrugStock/InsertDrugApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugDetailList">
+      <soap:operation soapAction="http://tempuri.org/IApplyToDrugStock/GetDrugDetailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ApplyToDrugStock">
+    <wsdl:port name="BasicHttpBinding_IApplyToDrugStock" binding="tns:BasicHttpBinding_IApplyToDrugStock">
+      <soap:address location="http://localhost:8081/ApplyToDrugStock/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
